@@ -312,6 +312,10 @@ public class SmartMetronomePlugin extends Plugin
 		15263, 15262
 	);
 
+	private static final Set<Integer> COLOSSEUM_REGIONS = ImmutableSet.of(
+		7216
+	);
+
 	// Slayer
 
 	private static final Set<Integer> SLAYER_TOWER_REGIONS = ImmutableSet.of(
@@ -620,6 +624,11 @@ public class SmartMetronomePlugin extends Plugin
 			}
 
 			else if (config.volcanicMineMetronome() && VOLCANIC_MINE_REGIONS.contains(mapregion))
+			{
+				return true;
+			}
+
+			else if (config.colosseumMetronome() && COLOSSEUM_REGIONS.contains(mapregion))
 			{
 				return true;
 			}
