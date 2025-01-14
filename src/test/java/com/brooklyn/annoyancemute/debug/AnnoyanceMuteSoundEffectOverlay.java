@@ -61,7 +61,7 @@ class AnnoyanceMuteSoundEffectOverlay extends OverlayPanel
 		String action = ALLOWED;
 		Color actionColor = COLOR_ALLOWED;
 
-		if (plugin.shouldMute(soundId, SoundEffectType.SOUND_EFFECT))
+		if (plugin.shouldMute(soundId, SoundEffectType.SOUND_EFFECT, event.getSource()))
 		{
 			action = CONSUMED;
 			actionColor = COLOR_CONSUMED;
@@ -110,7 +110,7 @@ class AnnoyanceMuteSoundEffectOverlay extends OverlayPanel
 			}
 		}
 
-		if (plugin.shouldMute(soundId, SoundEffectType.AREA_SOUND_EFFECT))
+		if (plugin.shouldMute(soundId, SoundEffectType.AREA_SOUND_EFFECT, event.getSource()))
 		{
 			action = CONSUMED;
 			actionColor = COLOR_CONSUMED;
